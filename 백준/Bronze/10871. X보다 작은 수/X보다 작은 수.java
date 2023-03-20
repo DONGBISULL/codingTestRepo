@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -11,10 +10,11 @@ public class Main {
             int a = sc.nextInt();
             arr[i] = a;
         }
-        int[] filterArr = Arrays.stream(arr).filter(item -> item < x).toArray();
         String result = "";
-        for (int a : filterArr) {
-            result += a + " ";
+        for (int a : arr) {
+            if (a < x) {
+                result += a + " ";
+            }
         }
         System.out.println(result);
     }
